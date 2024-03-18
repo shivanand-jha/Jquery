@@ -4,79 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>API_Assignment</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- <style>
-      .btn {
-        justify-content: space-between;
-        gap: 10px;
+    <style>
+      body{
+        max-width: 800px;
+        width: 100%;
+        margin: auto auto; 
+        padding: 20px;
+        background-color: rgb(138, 148, 152);
       }
-      .centre {
+      .grid-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      .grid-item{
+        margin: 10px 5px;
+        border: 5px solid rgb(142, 185, 184);
+        border-radius: 10px;
+        text-align: center;
+      }
+      .abc{
+        background-color: #5F7B7C;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .centre{
         justify-content: center;
       }
-      .mag{
-        margin-top:20px ;
+      button{
+        cursor: pointer;
+        background-color: black;
+        border-radius: 5px;
+        color: #fff;
+        font-size: larger;
+        margin-left:18px ;
       }
-      
-      * {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, "Helvetica Neue", sans-serif;
-}
-.flex {
-  display: flex;
-  gap :10px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    /* justify-content: center; */
-}
-
-.abc {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 10px;
-}
-.grid-item {
-  background-color: rgb(165, 218, 144);
-  border: 2px solid rgba(48, 27, 27, 0.8);
-  padding: 10px;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 10px;
-  margin: 10px;
-}
-
-.button{
-    font-size: 1.5rem;
-    justify-content: left;
-}
-    </style> -->
+    </style>
   </head>
   <body>
-    <div>
-        <header>
-            <nav class="flex button mag">
-                <button>People</button>
-                <button>Films</button>
-            </nav>
-        </header>
-    </div>
-    <main>
-    <section>
-      <div class="show-res">
-        <div class="people flex centre">
-            <div class="grid-container" id="characterCard">
-            </div>
+    <div >
+      <section class="flex">
+        <div class="center">
+          <button onclick="peopleDetails()">People</button>
+          <button onclick="filmsDatails()">Films</button>
         </div>
-    </section>
-        <div class="films flex"><div id="pop-fims"></div></div>
-        <div class="planets flex"><div id="pop"></div></div>
-        <div class="species flex"><div id="pop"></div></div>
-        <div class="starships flex"><div id="pop"></div></div>
-      </div>
-    </main>
+      </section>
+      <section class="flex">
+        <div  class="centre">
+          <div class="grid-container " id="characterCard" >
+
+          </div>
+          <div class="grid-container" id="filmCard">
+          </div>
+        </div>
+        
+          
+      </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
